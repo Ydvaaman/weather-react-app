@@ -37,7 +37,7 @@ class App extends React.Component {
   // tries to make an API call with the given city name and triggers state update
   makeApiCall = async (city) => {
     const api_data = await fetch(
-      `http://localhost:3001/api/getweatherinfo?location=${city}`
+      `https://weather-api-omnify-task.onrender.com/api/getweatherinfo?location=${city}`
     ).then((resp) => resp.json());
     console.log(api_data);
     if (api_data.cod === "200") {
